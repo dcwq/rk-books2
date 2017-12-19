@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Bold Example</title>
+    </head>
+    <body>
+
+        <h1>Bold</h1>
+
+        <table border="1">
+            <tr>
+                <td>Book name</td>
+                <td>Compatibility</td>
+                <td>Book date</td>
+                <td>AVG female</td>
+                <td>AVG male</td>
+            </tr>
+
+            <?php foreach ($stats['results1'] as $book): ?>
+
+                <tr>
+                    <td><?= $book->getName() ?></td>
+                    <td><?= number_format($book->compatibility, 2) ?> %</td>
+                    <td><?= $book->getBookDate() ?></td>
+                    <td><?= number_format($book->female_avg_age, 2) ?></td>
+                    <td><?= number_format($book->male_avg_age, 2) ?></td>
+                </tr>
+
+            <?php endforeach; ?>
+        </table>
+
+    <hr>
+
+        <table border="1">
+            <tr>
+                <td>Book name</td>
+                <td>Compatibility</td>
+                <td>Book date</td>
+                <td>AVG female</td>
+                <td>AVG male</td>
+            </tr>
+
+            <?php foreach ($stats['results2'] as $book): ?>
+
+                <tr>
+                    <td><?= $book->getName() ?></td>
+                    <td><?= number_format($book->compatibility, 2) ?> %</td>
+                    <td><?= $book->getBookDate() ?></td>
+                    <td><?= number_format($book->female_avg_age, 2) ?></td>
+                    <td><?= number_format($book->male_avg_age, 2) ?></td>
+                </tr>
+
+            <?php endforeach; ?>
+        </table>
+
+
+    </body>
+</html>
